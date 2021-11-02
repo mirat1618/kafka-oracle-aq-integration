@@ -1,0 +1,38 @@
+{
+  "title": "Song",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "not": "null",
+      "minLength": 1
+    },
+    "duration": {
+      "type": "number",
+      "not": "null",
+      "minimum": 1
+    },
+    "filePath": {
+      "type": "string",
+      "not": "null",
+      "minLength": 10
+    },
+    "description": {
+      "type": "string",
+      "not": "null",
+      "minLength": 10
+    },
+    "addedAt": {
+      "type": "string",
+      "not": "null",
+      "minLength": 19
+    }
+  },
+  "required": [
+    "title",
+    "duration",
+    "filePath",
+    "description",
+    "addedAt"
+  ]
+}
