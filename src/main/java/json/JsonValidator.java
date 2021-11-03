@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 public class JsonValidator {
     public static ClassLoader classLoader = ClassLoader.getSystemClassLoader();
-    public static JSONObject jsonSchema = new JSONObject(new JSONTokener(classLoader.getResourceAsStream("SongExtendedJsonSchema.json")));
+    public static JSONObject jsonSchema = new JSONObject(new JSONTokener(classLoader.getResourceAsStream("ExtendedSongJsonSchema.json")));
     public static Schema schema = SchemaLoader.load(jsonSchema);
     public static Logger logger = LoggerFactory.getLogger(JsonValidator.class);
 

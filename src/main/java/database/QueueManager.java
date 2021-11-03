@@ -124,7 +124,15 @@ public class QueueManager {
             try {
                 message = queue.createMessage();
 
-                Struct struct = connection.createStruct(objectName, song.toObjectArray());
+                Object[] songProperties = {
+                        song.getTitle(),
+                        song.getDuration(),
+                        song.getFilePath(),
+                        song.getDescription(),
+                        song.getAddedAt()
+                };
+
+                Struct struct = connection.createStruct(objectName, songProperties);
                 AQObjectPayload payload = message.getObjectPayload();
                 payload.setPayloadData(struct);
 

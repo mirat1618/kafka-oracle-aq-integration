@@ -121,14 +121,14 @@ public class ExtendedSong implements SQLData {
         return sb.toString();
     }
 
-    public Object[] toObjectArray() {
-        Object objectFields[] = {
-                this.getTitle(),
-                this.getDuration(),
-                this.getFilePath(),
-                this.getDescription(),
-                this.getAddedAt(),
-        };
-        return objectFields;
-    }
+//    public Object[] toObjectArray() {
+//        Object objectFields[] = {
+//                this.getTitle(),
+//                this.getDuration(),
+//                this.getFilePath(),
+//                this.getDescription(),
+//                this.getAddedAt()
+//        };
+//        return objectFields;
+//    }
 }
