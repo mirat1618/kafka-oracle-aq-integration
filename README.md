@@ -87,5 +87,20 @@ src/
   * _main()_ - entry point of the app (invokes Enqueuer and Dequeuer threads)
 * model/**ExtendedSong** - the class that represents Oracle object type (Song) by implementing SQLData interface
 _ _ _
+Usage:
+* Run Zookeeper
+* Run Kafka Server
+* Set _.properties_ files. Run the app (_main.Main_)
+* Send a new Song as a JSON string to "**to-be-enqueued**" topic:
+```
+{"title":"Haruka Kanata", "duration":165, "filePath": "/etc/music/haruka_kanata.mp3", "description": "Haruka Kanata song description", "addedAt": "2021-11-01 00:33:05.777"}
+```
+![Visual scheme](img/to-be-enqueued.png)
+* The string will be deserialized to POJO Song
+* POJO Song will be enqueued and then dequeued:
 
+![Visual scheme](img/app-console.png)
+* Dequeued POJO will be serialized and sent to "**dequeued**" topic:
 
+![Visual scheme](img/dequeued.png)
+_ _ _
