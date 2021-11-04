@@ -4,10 +4,10 @@ An example of a basic **Kafka** - **Oracle Advanced Queuing** (AQ) adapter.
 
 Kafka topics used in the example:
 1. **"to-be-enqueued"**
- 
-A topic where JSON strings are sent to be enqueued further:
 
-2. **"dequeued"** 
+A topic where JSON strings are sent to be enqueued further
+
+3. **"dequeued"** 
 
 A topic where dequeued objects (converted to JSON strings) are displayed.
 
