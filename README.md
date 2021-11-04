@@ -5,11 +5,11 @@ An example of a basic **Kafka** - **Oracle Advanced Queuing** (AQ) adapter.
 Kafka topics used in the example:
 1. **"to-be-enqueued"**
  
-A topic where JSON strings are sent to be enqueued further
+A topic where JSON strings are sent to be enqueued further:
 
 2. **"dequeued"** 
 
-A topic where dequeued objects (converted to JSON strings) are displayed
+A topic where dequeued objects (converted to JSON strings) are displayed.
 
 An order of execution:
 1. JSON string is inserted into the **"to-be-enqueued"** Kafka topic
@@ -90,7 +90,7 @@ _ _ _
 Usage:
 * Run Zookeeper
 * Run Kafka Server
-* Set _.properties_ files. Run the app (_main.Main_)
+* Edit _.properties_ files (JDBC and Kafka access credentials). Run the app (_main.Main_)
 * Send a new Song as a JSON string to "**to-be-enqueued**" topic:
 ```
 {"title":"Haruka Kanata", "duration":165, "filePath": "/etc/music/haruka_kanata.mp3", "description": "Haruka Kanata song description", "addedAt": "2021-11-01 00:33:05.777"}
